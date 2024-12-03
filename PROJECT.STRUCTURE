@@ -1,0 +1,7 @@
+SmartFarmingSystem/
+├── src/
+│   ├── FarmerInterface.java
+│   ├── RetailerInterface.java
+│   ├── Farmer.java
+│   ├── Retailer.java
+│   └── Main.java
