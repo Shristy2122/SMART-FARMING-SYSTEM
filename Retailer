@@ -1,0 +1,32 @@
+import java.util.List;
+
+public class Retailer implements RetailerInterface {
+    private String username;
+    private String password;
+
+    public Retailer(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    @Override
+    public void login(String username, String password) {
+        if (this.username.equals(username) && this.password.equals(password)) {
+            System.out.println("Retailer logged in successfully!");
+        } else {
+            System.out.println("Invalid credentials!");
+        }
+    }
+
+    @Override
+    public void searchCrop(String cropName, String area) {
+        System.out.println("Searching for crop: " + cropName + " in area: " + area);
+        // You can add database or list search logic here.
+    }
+
+    @Override
+    public void purchaseCrop(String cropName, int quantity) {
+        System.out.println("Purchased " + quantity + " units of " + cropName);
+        // Implement purchase logic here.
+    }
+}
