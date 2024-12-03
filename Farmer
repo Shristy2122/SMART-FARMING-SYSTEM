@@ -1,0 +1,52 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Farmer implements FarmerInterface {
+    private String username;
+    private String password;
+    private Map<String, CropDetails> cropDetails = new HashMap<>();
+
+    public Farmer(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    @Override
+    public void login(String username, String password) {
+        if (this.username.equals(username) && this.password.equals(password)) {
+            System.out.println("Farmer logged in successfully!");
+        } else {
+            System.out.println("Invalid credentials!");
+        }
+    }
+
+    @Override
+    public void uploadCropDetails(String cropName, int quantity, String area) {
+        cropDetails.put(cropName, new CropDetails(cropName, quantity, area));
+        System.out.println("Crop details uploaded successfully.");
+    }
+
+    @Override
+    public void viewCropDetails() {
+        for (CropDetails details : cropDetails.values()) {
+            System.out.println(details);
+        }
+    }
+
+    private static class CropDetails {
+        String cropName;
+        int quantity;
+        String area;
+
+        CropDetails(String cropName, int quantity, String area) {
+            this.cropName = cropName;
+            this.quantity = quantity;
+            this.area = area;
+        }
+
+        @Override
+        public String toString() {
+            return "Crop: " + cropName + ", Quantity: " + quantity + ", Area: " + area;
+        }
+    }
+}
