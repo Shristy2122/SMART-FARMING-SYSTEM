@@ -1,7 +1,7 @@
-FarmConnect Web
+FarmConnect Web:
 FarmConnect is a web application designed to connect farmers and consumers directly, allowing farmers to list their products and enabling consumers to browse and purchase them at fair prices. This platform facilitates direct communication, aiming to promote fair trade and improve access to fresh produce.
 
-Features
+Features:
 User Registration & Authentication:
 Allows users to create accounts and securely log in.
 
@@ -17,7 +17,7 @@ Consumers can negotiate prices, and farmers can accept or counter offers.
 Admin Panel:
 Manage users, products, and monitor activities on the platform
 
-Technologies Used
+Technologies Used:
 Java
 Backend logic
 
