@@ -1,0 +1,5 @@
+public interface FarmerInterface {
+    void login(String username, String password);
+    void uploadCropDetails(String cropName, int quantity, String area);
+    void viewCropDetails();
+}
